@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --montserrat: "Montserrat", serif;
+  --fraunces: "Fraunces", serif;
+}
+/*********Large Desktops************/
+body {
+  height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  width: 550px;
+  height: 430px;
+  display: flex;
+  background-color: var(--White);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-image {
+  width: 50%;
+  height: 100%;
+}
+.img-desktop {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.img-mobile {
+  display: none;
+}
+.product-info {
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+.product-ctg {
+  font-family: var(--montserrat);
+  font-size: 0.875rem;
+  letter-spacing: 0.05;
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+}
+.product-name {
+  font-family: var(--fraunces);
+  font-size: 2rem;
+  color: var(--dark-blue);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.product-desc {
+  font-family: var(--montserrat);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 20px;
+}
+.product-price {
+  font-family: var(--fraunces);
+  font-size: 1.5rem;
+  color: var(--dark-cyan);
+}
+.product-discount {
+  font-family: var(--montserrat);
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+  padding-left: 40px;
+}
+.price-tag {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-cyan);
+  color: var(--White);
+  outline: none;
+  border: none;
+  padding: 15px 0;
+  border-radius: 8px;
+  font-family: var(--montserrat);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+i img {
+  width: 20px;
+  height: 20px;
+}
+i {
+  padding-right: 10px;
+}
+button:hover {
+  background-color: hsl(158, 68%, 9%);
+}
+/****************************Tablets*****************************/
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-image {
+    width: 100%;
+  }
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+    width: 100%;
+  }
+  .product-info {
+    width: 100%;
+    padding: 30px;
+  }
+}
+/**************Mobile*******************/
+@media screen and (max-width: 375px) {
+  .product-name {
+    font-size: 1.75rem;
+  }
+  .product-info {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .product-name {
+    font-size: 1.625rem;
+  }
+  .product-info {
+    width: 100%;
+    padding: 20px;
+  }
+}
